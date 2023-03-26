@@ -23,9 +23,9 @@ const bodyPartOptions = ['fingers', 'thumbs', 'forearms', 'biceps', 'shoulders',
 const equipmentOptions = ['barbells', 'dumbells', 'TRX machine', 'treadmill', 'rowing machine', 'exercise bike', 'resistance bands', 'cans of beans' ]
 
 
-// 3. Exercise duration between 1 and 10 minutes
+// 3. Exercise duration between 2 and 10 minutes
 // This does not need its own function or further action
-const durationOptions = Math.ceil(Math.random() * 10)
+
 
 
 // 4. What will the exercises achieve
@@ -40,19 +40,43 @@ const chooseRandomIndex = arr =>  Math.floor(Math.random() * arr.length)
 const chooseOption = arr =>  arr[chooseRandomIndex(arr)]
 
 
-// c) generate choices
+
+
+// const document = Document()
+// DOM selectors
+
+// /click function for the button
+
+let clicker = document.querySelector('.click-me')
+
+const showMessage = () => {
+    // c) generate choices
 
     // i) body part
 const bodyPart = chooseOption(bodyPartOptions)
 
-    // ii) equipment
+// ii) equipment
 const equipment = chooseOption(equipmentOptions)
 
-    // iii) achieve options 
+// iii) achieve options 
 const achieve = chooseOption(achieveOptions)
 
+// Choose duration option from 2 to 10 minutes
+const durationOptions = Math.ceil(Math.random() * 9) + 1
+
 // d) user message:
-const message = `In this exercise you will work on your ${bodyPart} using the ${equipment}. \nYou will do this exercise for ${durationOptions} minutes, after which you will be rewarded with ${achieve}!`
+const message = `Work out your ${bodyPart} using the ${equipment} for ${durationOptions} minutes to be rewarded with ${achieve}!`
 
 console.log(message)
 
+
+const newWorkout = document.createElement('li')
+newWorkout.innerHTML = message
+document.querySelector('.message').appendChild(newWorkout)
+
+// const liItem = document.querySelector('h3');
+// liItem.innerHTML = message;
+
+};
+
+clicker.onclick = showMessage
