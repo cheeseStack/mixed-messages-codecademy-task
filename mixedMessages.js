@@ -16,7 +16,7 @@
 */
 
 // 1. Body parts to work out / exercise
-const bodyPartOptions = ['fingers', 'thumbs', 'forearm', 'biceps', 'shoulders', 'back', 'chest', 'abdominals', 'hips', 'quadriceps', 'calves', 'ankles', 'toes'];
+const bodyPartOptions = ['fingers', 'thumbs', 'forearms', 'biceps', 'shoulders', 'back', 'chest', 'abdominals', 'hips', 'quadriceps', 'calves', 'ankles', 'toes'];
 
 
 // 2. exercise equipment
@@ -52,3 +52,7 @@ const equipment = chooseOption(equipmentOptions)
 const achieve = chooseOption(achieveOptions)
 
 // d) user message:
+const message = `In this exercise you will work on your ${bodyPart} using the ${equipment}. \nYou will do this exercise for ${durationOptions} minutes, after which you will be rewarded with ${achieve}!`
+
+console.log(message)
+
