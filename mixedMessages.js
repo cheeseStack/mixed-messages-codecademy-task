@@ -34,3 +34,9 @@ const achieve = ['eternal happiness', 'eternal life', 'respect from the world', 
 //  Create a random index functions based on the array length
 const chooseRandomIndex = arr =>  Math.floor(Math.random() * arr.length)
 
+
+// 1. Choose body part
+const chooseBodyPart = () =>  bodyParts[chooseRandomIndex(bodyParts)]
+
+
+console.log(chooseBodyPart())
