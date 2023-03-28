@@ -34,7 +34,7 @@ p {
 .container {
     border: 2px solid gray;
     border-radius: 0.625rem;
-    width: 60rem;
+    max-width: 80rem;
     height: auto;
     padding: 2rem;
     margin: auto;
@@ -80,4 +80,9 @@ li {
     background-color: hsla(220, 80%, 90%, 1);
     padding: 0.5rem;
     border-radius: 0.625rem;
+}
+
+li:last-child {
+    background-color: hsla(220, 80%, 95%, 1);
+    border: 2px solid orange;
 }
