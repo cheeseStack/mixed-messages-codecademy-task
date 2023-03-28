@@ -65,7 +65,7 @@ const achieve = chooseOption(achieveOptions)
 const durationOptions = Math.ceil(Math.random() * 9) + 1
 
 // d) user message:
-const message = `Work out your ${bodyPart} using the ${equipment} for ${durationOptions} minutes to be rewarded with ${achieve}!`
+const message = `Work out your <strong>${bodyPart}</strong> using the <strong>${equipment}</strong> for <strong>${durationOptions} minutes</strong> to be rewarded with <strong>${achieve}!</strong>`
 
 console.log(message)
 
